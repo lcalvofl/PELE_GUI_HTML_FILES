@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!-- PELE SKELETON -->
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history 
+draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections 
+csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            @charset "UTF-8";
+            [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide
+            {
+                display:none !important;
+            }
+            ng\:form{
+                display:block;
+            }
+            .ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}
+        
+        </style>
+
+<script type="text/javascript">
+    window.NREUM||(NREUM={});
+    NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"eb16e806f0","applicationID":"3052310","transactionName":"e18MRERZWFVVSkoFFkxHDUJdRRtQXlwAHA==","queueTime":0,"applicationTime":264,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}
+</script>
+        
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+        
+<script type="text/javascript"> <!-- WEBSOCKET CONNECTION -->
+
+</script>  
+        
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+
+
+        
+  <title>PELE Molecule APPLICATION</title>
+  <link href="css/base.css" media="all" rel="stylesheet">
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+        
+  <meta content="PELE Molecule Visualizer" property="og:title">
+  <meta content="img/miniature.jpg" property="og:image">
+  <meta content="PELE Molecule APP" property="og:site_name">
+    
+  <meta content="website" property="og:type">
+  <meta content="https://bsc.es/pele/us/en/main" property="og:url">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+  <style type="text/css">
+        
+    .layer1 {
+        margin: 0;
+        padding: 0;
+        width: 500px;
+    }
+
+    .heading {
+        margin: 1px;
+        color: #fff;
+        padding: 3px 10px;
+        cursor: pointer;
+        position: relative;
+        background-color:#c30;
+    }
+    .content {
+        padding: 5px 10px;
+        background-color:#fafafa;
+    }
+    p { 
+        padding: 5px 0; 
+    }        
+        
+        
+</style>
+
+<script src="js/gallery.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/grid.js"></script>
+        
+<script type="text/javascript">
+    
+jQuery(document).ready(function() {
+  jQuery(".content").hide();
+    
+  //toggle the componenet with class msg_body
+  jQuery(".heading").click(function()
+  {
+      jQuery(this).next(".content").slideToggle(500);
+   });
+
+
+    
+  jQuery(".element").click(function()  
+  {
+    jQuery(this).next(".content").slideToggle(500);
+  });
+    
+});
+</script>
+        
+        
+        
+        
+        
+<style id="clearly_highlighting_css" type="text/css">
+    /* selection */ 
+    html.clearly_highlighting_enabled ::-moz-selection { 
+        background: rgba(246, 238, 150, 0.99); 
+    } 
+    html.clearly_highlighting_enabled ::selection { 
+        background: rgba(246, 238, 150, 0.99); 
+    } 
+    /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */          cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; 
+    } 
+    /* highlight tag */ 
+    em.clearly_highlight_element {    
+        font-style: inherit !important; 
+        font-weight: inherit !important;    
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    
+        background-repeat: repeat-x; 
+        background-position: top left; 
+        background-size: 100% 100%; 
+    } 
+    
+    /* the delete-buttons are positioned relative to this */ 
+    em.clearly_highlight_element.clearly_highlight_first { 
+        position: relative; 
+    } 
+    /* delete buttons */ 
+    em.clearly_highlight_element a.clearly_highlight_delete_element {    
+        display: none; 
+        cursor: pointer;    
+        padding: 0; 
+        margin: 0; 
+        line-height: 0;    
+        position: absolute; 
+        width: 34px; 
+        height: 34px; 
+        left: -17px; 
+        top: -17px;    
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); 
+        background-repeat: no-repeat; 
+        background-position: 0px 0px; 
+    } 
+    
+    em.clearly_highlight_element a.clearly_highlight_delete_element:hover { 
+        background-position: -34px 0px; 
+    } 
+    /* retina */ 
+    @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {                 em.clearly_highlight_element { 
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); 
+    }    
+em.clearly_highlight_element a.clearly_highlight_delete_element { 
+    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); 
+    background-size: 68px 34px; } } 
+</style>
+        
+<style>
+    [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
+    [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }
+    [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
+    [touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ 
+        -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+</style>
+    </head>
+<body>
+
+<!-- ******************************************************************************************************** -->
+<!-- ******************************************************************************************************** -->
+                
+ 	<!--div class="container gallery">	
+		
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					
+				</ul>
+				<p>Filler text by <a href="http://veggieipsum.com/">Veggie Ipsum</a></p>
+				<a id="og-additems" href="#">add more</a>
+			</div>
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/grid.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>               
+                
+<!-- ******************************************************************************************************** -->
+<!-- ******************************************************************************************************** -->                
+
+<div class="app ng-scope" ng-app="galleryApp" ng-controller="GalleryBaseController" data-market="us" data-locale="en" data-userid="">
+ 
+
+
+
+  <div class="sidebar-container">
+    <div class="sidebar">
+      <a class="logo" href="#"></a>
+      <ul class="nav">
+        <li class="nav__button nav__button--selector">
+          <div class="nav__button__selected">
+            <span class="nav__button__icon icon-cog"></span>
+            <span class="nav__button__label nav__button__label--large">Tools</span>
+          </div>
+          <ul class="nav__button__options">
+            <li class="nav__button__option" ng-click="goToTool(&#39;pattern&#39;, false)">
+              <span class="nav__button__icon icon-contract"></span>
+              <span class="nav__button__label nav__button__label--large">Measure</span>
+            </li>
+            <li class="nav__button__option" ng-click="goToTool(&#39;free-form&#39;, false)">
+              <span class="nav__button__icon icon-pencil"></span>
+              <span class="nav__button__label nav__button__label--large">Edit</span>
+            </li>
+            <li class="nav__button__option" ng-click="goToTool(&#39;kaleidoscope&#39;, false)">
+              <span class="nav__button__icon icon-newtab"></span>
+              <span class="nav__button__label nav__button__label--large">Selection</span>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__button--gallery--inactive">
+          <span class="icon-gallery nav__button__icon icon-notebook"></span>
+          <span class="nav__button__label">Jobs</span>
+          
+        </li>
+        </a>
+        <li class="nav__button--gallery">
+          <span class="nav__button__icon icon-stats"></span>
+          <span class="nav__button__label">Canvas</span>
+          
+        </li>
+        </a>
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sign-out">
+          <a target="_self" href="#">Home</a>
+        </li>
+        <li><a target="_blank" href="#">About PELE</a></li>
+        <li><a target="_blank" href="#">FAQ's</a></li>
+        <li><a target="_self" href="#">Terms &amp; Legacy</a></li>
+        <!--li><a target="_self" href="#"></a></li-->
+        <li><a target="_blank" href="#" class="formica__link">Reset password?</a></li>
+      </ul>
+    </div>
+  </div>
+    
+   <div class="gallery">
+    <div class="gallery__head clearfix">
+      <ul class="gallery__nav clearfix">
+        <li><a class="active" href="#" target="_self">Jobs Running</a></li>
+        <li><a href="#" target="_self">Recent Jobs</a></li><!-- http://envisualizer.formica.com/us/en/artworks/recent -->
+        <li><a href="#" target="_self">Shared</a></li>
+        <li><a href="#" target="_self">Archived</a></li><!-- http://envisualizer.formica.com/us/en/artworks/recent -->
+      </ul>
+      <a href="javascript:;" class="gallery__new" ng-click="goToTool(&#39;pattern&#39;, false)">New System</a>
+        <a href="javascript:;" class="gallery__head__login" ng-click="showLogin()">Sign in</a>
+    </div> 
+
+      
+      
+    <div class="gallery__artworks">
+          <a class="gallery__artwork gallery__artwork--124" href="#">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(img/molecule1.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">Job 1 Name - Job description</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--166"  href="CANVAS.html">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(img/molecule2.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">Job 2 Name - Job description</h2>
+
+          </a>
+          <!--a class="gallery__artwork gallery__artwork--132" ng-href="/us/en/artworks/132" ng-click="openArtwork(132)" href="http://envisualizer.formica.com/us/en/artworks/132">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/259/bitmap/thumb_artwork20140513-27333-pu7n4q.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Augustin</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--178" ng-href="/us/en/artworks/178" ng-click="openArtwork(178)" href="http://envisualizer.formica.com/us/en/artworks/178">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/349/bitmap/thumb_artwork20140513-3628-1hcoosz.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Tupelo</h2>
+
+          </a-->
+
+          <!--a class="gallery__artwork gallery__artwork--176" ng-href="/us/en/artworks/176" ng-click="openArtwork(176)" href="http://envisualizer.formica.com/us/en/artworks/176">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/344/bitmap/thumb_artwork20140513-3634-30ambb.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Tupelo</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--271" ng-href="/us/en/artworks/271" ng-click="openArtwork(271)" href="http://envisualizer.formica.com/us/en/artworks/271">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/543/bitmap/thumb_tiled-artwork-6fd5b8e096b39b0cb72b6f1b807c26c58e483698.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Theo Strahlen</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--261" ng-href="/us/en/artworks/261" ng-click="openArtwork(261)" href="http://envisualizer.formica.com/us/en/artworks/261">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/522/bitmap/thumb_tiled-artwork-f6cb529b535261e4118cc62be443fb52687485c6.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Rick Armstrong</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--245" ng-href="/us/en/artworks/245" ng-click="openArtwork(245)" href="http://envisualizer.formica.com/us/en/artworks/245">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/489/bitmap/thumb_tiled-artwork-c3b867366b202615e6d05ea26e5af5b27edfb789.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Adam Lapacz</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--118" ng-href="/us/en/artworks/118" ng-click="openArtwork(118)" href="http://envisualizer.formica.com/us/en/artworks/118">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/227/bitmap/thumb_artwork20140513-9058-lnewmx.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Dan Rapp</h2>
+
+          </a>
+          <a class="gallery__artwork gallery__artwork--117" ng-href="/us/en/artworks/117" ng-click="openArtwork(117)" href="http://envisualizer.formica.com/us/en/artworks/117">
+
+            <div class="gallery__artwork__image__container">
+              <div class="gallery__artwork__image" style="background-image: url(https://d8nbfizs6o51i.cloudfront.net/uploads/asset/225/bitmap/thumb_artwork20140513-9040-dr1ykm.jpg)"></div>
+              <span class="gallery__artwork__hover">
+                <i class="icon-views"></i>
+                View
+              </span>
+            </div>
+
+            <h2 class="gallery__artwork__by">By Brandon Robinson</h2>
+
+          </a-->
+
+
+
+
+
+
+        </div>
+      </div>
+        
+
+
+  <div class="gallery__overlay">
+    <div class="gallery__overlay__bg"></div>
+    <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngIf: artwork.image -->
+</div>
+  </div>
+
+  <div class="login hidden" ng-init="login = true">
+  <div class="login__tint" ng-click="hideLogin()"></div>
+
+  <div class="login__content" ng-show="activeOverlay(&#39;login&#39;)">
+    <h2 class="login__title">You must sign<br>to access to<br>PELE Tool<span>™</span></h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/us/en/users/sign_in" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="login__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_tool" name="user[tool]" type="hidden">
+      <input autocomplete="off" id="user_email" name="user[email]" placeholder="Your Email" type="email" value="">
+      <input autocomplete="off" id="user_password" name="user[password]" placeholder="Your Password" type="password">
+         
+      <input class="login__submit" name="commit" type="submit" value="Sign In">
+</form>
+    <div class="login__error__msg">Email or password was incorrect, try again.</div>
+
+    <p>No account?</p>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;request&#39;)">Request a Beta Invite</a><br>
+      <a href="http://bsc.es/pele/en/aaa/privacy" target="_self" class="login__privacy__link">Privacy Policy</a>
+      <a href="javascript:;" target="_self" class="login__forgot__link" ng-click="setOverlay(&#39;forgot&#39;)">Forgot password?</a>
+    </p>
+  </div>
+
+  <div class="login__content login__content--request ng-hide" ng-show="activeOverlay(&#39;request&#39;)">
+    <h2 class="login__title">Request Beta Invite</h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/en/aaa/invitation" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="request__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_market_id" name="user[market_id]" type="hidden" value="1">
+      <input id="user_name" name="user[name]" placeholder="Full Name" type="text">
+        <input id="user_email" name="user[email]" placeholder="Email Address" type="text" value=""><p></p>
+      <input id="user_company" name="user[company]" placeholder="Company" type="text">
+      <input class="login__submit" name="commit" type="submit" value="Request invite">
+</form>
+    <p>Already have an account?</p>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;login&#39;)">Sign in</a>
+    </p>
+  </div>
+
+  <div class="login__content login__content--forgot ng-hide" ng-show="activeOverlay(&#39;forgot&#39;)">
+    <h2 class="login__title">Forgot your password?</h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/en/aaa/password" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="forgot__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_email" name="user[email]" placeholder="Email Address" type="email" value="">
+      <input class="login__submit" name="commit" type="submit" value="Reset password">
+</form>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;login&#39;)">Sign in</a>
+    </p>
+  </div>
+
+  <div class="request__success">
+    <h2 class="login__title">Thank you!</h2>
+    <p>An email has been sent to your inbox. Please click the activation link provided to create your account and access PELE App.<span></span></span></p>
+  </div>
+
+  <div class="forgot__success">
+    <h2 class="login__title">Thank you!</h2>
+    <p>An email has been sent to your inbox. Please follow the instructions on how to reset your password to PELE App.<span>™</span></p>
+  </div>
+
+</div>
+
+  
+  
+</div>
+
+
+
+
+
+  
+
+</body></html>

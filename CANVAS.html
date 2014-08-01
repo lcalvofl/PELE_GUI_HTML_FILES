@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!-- PELE SKELETON -->
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history 
+draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections 
+csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            @charset "UTF-8";
+            [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide
+            {
+                display:none !important;
+            }
+            ng\:form{
+                display:block;
+            }
+            .ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}
+            
+            
+
+                svg {
+            font: 10px sans-serif;
+            }
+
+            path {
+                stroke: #000;
+                stroke-width: 2;
+                fill: none;
+            }
+
+            .axis path,.axis line {
+                fill: none;
+                stroke: #000;
+                stroke-width: 1;
+                shape-rendering: crispEdges;
+            }
+
+            .x.axis path {
+              display: none;
+            }
+
+            .dot {
+                stroke: #000;
+                stroke-width: 2;
+                radius: 5;
+
+            }
+
+
+            .brush .extent {
+                stroke: #fff;
+                fill-opacity: .125;
+                shape-rendering: crispEdges;
+            }
+
+            div.tooltip {
+                position: absolute;
+                text-align: center;
+                width: 80px;
+                height: 40px;
+                padding: 2px;
+                font: 12px sans-serif;
+                background: #ccc;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                pointer-events: none;
+
+            }
+
+            
+        /* Barra progreso */
+                
+            input[type=range] {
+                -webkit-appearance: none;
+                background-color: silver;
+                width: 100%;
+                height:20px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                 -webkit-appearance: none;
+                background-color: #666;
+                position:bottom;
+                opacity: 0.5;
+                width: 10px;
+                height: 26px;
+            }
+        
+        </style>
+<!--script async="" src="./WEBPEL_files/analytics.js"></script-->
+
+
+<!--script src="js/grapho_d3.js"></script-->
+<script type="text/javascript">
+    window.NREUM||(NREUM={});
+    NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"eb16e806f0","applicationID":"3052310","transactionName":"e18MRERZWFVVSkoFFkxHDUJdRRtQXlwAHA==","queueTime":0,"applicationTime":264,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}
+</script>
+        
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+
+<!-- WEBSOCKET CONNECTION and MESSAGES-->
+<script src="messages.js"               ></script>
+<script src="bytes.js"			        ></script>
+<script src="peripherals.js"            ></script>
+<script src="websocketConnection.js"	></script>
+        
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
+
+
+        
+  <title>PELE Molecule APPLICATION</title>
+  <link href="css/base.css" media="all" rel="stylesheet">
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta content="PELE Molecule Visualizer" property="og:title">
+  <meta content="img/miniature.jpg" property="og:image">
+  <meta content="PELE Molecule APP" property="og:site_name">
+  <meta content="website" property="og:type">
+  <meta content="https://bsc.es/pele/us/en/main" property="og:url">
+
+<style type="text/css"></style>
+        
+<style id="clearly_highlighting_css" type="text/css">
+    /* selection */ 
+    html.clearly_highlighting_enabled ::-moz-selection { 
+        background: rgba(246, 238, 150, 0.99); 
+    } 
+    html.clearly_highlighting_enabled ::selection { 
+        background: rgba(246, 238, 150, 0.99); 
+    } 
+    /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */          cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; 
+    } 
+    /* highlight tag */ 
+    em.clearly_highlight_element {    
+        font-style: inherit !important; 
+        font-weight: inherit !important;    
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    
+        background-repeat: repeat-x; 
+        background-position: top left; 
+        background-size: 100% 100%; 
+    } 
+    
+    /* the delete-buttons are positioned relative to this */ 
+    em.clearly_highlight_element.clearly_highlight_first { 
+        position: relative; 
+    } 
+    /* delete buttons */ 
+    em.clearly_highlight_element a.clearly_highlight_delete_element {    
+        display: none; 
+        cursor: pointer;    
+        padding: 0; 
+        margin: 0; 
+        line-height: 0;    
+        position: absolute; 
+        width: 34px; 
+        height: 34px; 
+        left: -17px; 
+        top: -17px;    
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); 
+        background-repeat: no-repeat; 
+        background-position: 0px 0px; 
+    } 
+    
+    em.clearly_highlight_element a.clearly_highlight_delete_element:hover { 
+        background-position: -34px 0px; 
+    } 
+    /* retina */ 
+    @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {                 em.clearly_highlight_element { 
+        background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); 
+    }    
+em.clearly_highlight_element a.clearly_highlight_delete_element { 
+    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); 
+    background-size: 68px 34px; } } 
+</style>
+        
+<style>
+    [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
+    [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }
+    [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
+    [touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ 
+        -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+</style>
+    </head>
+
+    
+<body>
+
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+    
+    function actualizar_video(valor){
+        document.miForm.current.value=valor;     
+        
+    }
+    
+    function actualizar_control(valor){
+        document.miForm.rango.value=valor;
+        
+    }
+    
+    function llamar_rango(){
+        var maximo = document.miForm.max.value;
+        var minimo = document.miForm.min.value;
+        alert(minimo+"-"+maximo);
+        
+    }
+
+</script>
+
+
+<div class="app ng-scope" ng-app="galleryApp" ng-controller="GalleryBaseController" data-market="us" data-locale="en" data-userid="">
+  
+  
+  
+
+  <div class="sidebar-container">
+    <div class="sidebar">
+      <a class="logo" href="#"></a>
+      <ul class="nav">
+        <li class="nav__button nav__button--selector">
+          <div class="nav__button__selected">
+            <span class="nav__button__icon icon-cog"></span>
+            <span class="nav__button__label nav__button__label--large">Tools</span>
+          </div>
+          <ul class="nav__button__options">
+            <li class="nav__button__option" ng-click="goToTool(&#39;pattern&#39;, false)">
+              <span class="nav__button__icon icon-contract"></span>
+              <span class="nav__button__label nav__button__label--large">Measure</span>
+            </li>
+            <li class="nav__button__option" ng-click="goToTool(&#39;free-form&#39;, false)">
+              <span class="nav__button__icon icon-pencil"></span>
+              <span class="nav__button__label nav__button__label--large">Edit</span>
+            </li>
+            <li class="nav__button__option" ng-click="goToTool(&#39;kaleidoscope&#39;, false)">
+              <span class="nav__button__icon icon-newtab"></span>
+              <span class="nav__button__label nav__button__label--large">Selection</span>
+            </li>
+          </ul>
+        </li>
+        <a target="_self" href="WEBPEL.html">
+        <li class="nav__button--gallery--inactive">
+          <span class="icon-gallery nav__button__icon icon-notebook"></span>
+          <span class="nav__button__label">Jobs</span>
+          
+        </li>
+        </a>
+        <li class="nav__button--gallery">
+          <span class="nav__button__icon icon-stats"></span>
+          <span class="nav__button__label">Canvas</span>
+          
+        </li>
+        
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sign-out">
+          <a target="_self" href="#">Home</a>
+        </li>
+        <li><a target="_blank" href="#">About PELE</a></li>
+        <li><a target="_blank" href="#">FAQ's</a></li>
+        <li><a target="_self" href="#">Terms &amp; Legacy</a></li>
+        <!--li><a target="_self" href="#"></a></li-->
+        <li><a target="_blank" href="#" class="formica__link">Reset password?</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery__head clearfix">
+      <ul class="gallery__nav clearfix">
+        <li><a class="active" href="#" target="_self">Job - Status - Author</a></li>
+      </ul>
+           
+        <a href="javascript:;" class="gallery__new" ng-click="goToTool(&#39;pattern&#39;, false)">New System</a>
+        <a href="javascript:;" class="gallery__head__login" ng-click="showLogin()">Sign in</a>
+        <a href="javascript:;" class="gallery__head__login" ng-click="showLogin()">Sign in</a>
+        <a href="javascript:;" class="gallery__head__login" ng-click="showLogin()">Sign in</a>
+    </div>
+
+    <div class="gallery__artworks">
+
+
+        <!--canvas id="canvas1" width="512" height="512" 
+		style = "border:2px solid #e32145; -moz-transform: scale(-1, 1);
+				-webkit-transform: scale(1, -1);
+				-o-transform: scale(1, -1);
+				transform: scale(1, -1);
+		"											/>
+        <canvas id="canvas2" width="512" height="512" 
+		style = "border:2px solid #e2681f; -moz-transform: scale(-1, 1);
+				-webkit-transform: scale(1, -1);
+				-o-transform: scale(1, -1);
+				transform: scale(1, -1);
+		"											/-->
+        
+        <div class="gallery__artwork" id="graph">          <!--  section__canvas_left -->
+            
+            
+        </div>
+        
+        <div class="gallery__artwork__glow" id="mol_view"> <!--  section__canvas_right -->
+            
+        <form name="miForm" action="" enctype="text/plain"> 
+        <canvas id="canvas1" width="580" height="480" style = "border:2px solid #dedede; position: absolute; -moz-transform: scale(-1, 1);
+				-webkit-transform: scale(1, -1);
+				-o-transform: scale(1, -1);
+				transform: scale(1, -1);
+		">
+                
+        
+         </canvas>
+         <div style="width:580px; height:26px; position: relative; -moz-transform: scale(-1, 1);
+				-webkit-transform: scale(1, -1);
+				-o-transform: scale(1, -1);
+				transform: scale(1, -1);" >
+         
+             <input name="rango" id="rango" type="range" min="0" max="100" onchange="actualizar_video(this.value);" style="align:right" />
+             <input name="traject" id="traject" type="hidden"/>
+               
+             
+         </div>
+         
+            
+        <!-- Botones de accion -->
+
+    
+        <div class="settings-container-buttons ng-scope" ng-controller="SubtoolsBaseController">
+          <div class="settings ng-scope" ng-controller="KaleidoscopeSettings">
+
+            
+            <div class="settings__group settings__group--bar">
+              <ul class="settings__list">
+                <li class="settings__item settings__item--next" onclick="javascript:alert('play');">
+                  <div class="settings__item__child settings__item__button settings__item__button--kaleidoscope icon-play"></div>
+                  <!--div class="settings__item__child settings__item__tooltip">Play Sim</div-->
+                </li>
+                <li class="settings__item settings__item--prev" onclick="javascript:alert('pause');">
+                  <div class="settings__item__child settings__item__button settings__item__button--kaleidoscope icon-pause"></div>
+                  <!--div class="settings__item__child settings__item__tooltip">Pause Sim</div-->
+                </li>
+                  <li class="settings__item settings__item--next" onclick="javascript:alert('stop');">
+                  <div class="settings__item__child settings__item__button settings__item__button--kaleidoscope icon-stop"></div>
+                  <!--div class="settings__item__child settings__item__tooltip">Stop Sim</div-->
+                </li>
+                <li class="settings__item settings__item--prev" onclick="javascript:alert('init');">
+                  <div class="settings__item__child settings__item__button settings__item__button--kaleidoscope icon-start"></div>
+                  <!--div class="settings__item__child settings__item__tooltip">First Step</div-->
+                </li>
+                <li class="settings__item settings__item--prev" onclick="javascript:alert('end');">
+                  <div class="settings__item__child settings__item__button settings__item__button--kaleidoscope icon-end"></div>
+                  <!--div class="settings__item__child settings__item__tooltip">Last Step</div-->
+                </li>
+                <li class="settings__item settings__item--prev">
+                
+                <input type="number" id="min" class="settings__item__child settings__item__button settings__item__button--kaleidoscope" maxlength="5" onchange="llamar_rango();" /><!-- readonly -->   
+         
+               
+                </li>
+                <li class="settings__item settings__item--prev">
+                
+                 <input type="number" name="current" id="current" class="settings__item__child settings__item__button settings__item__button--kaleidoscope" maxlength="5" onchange="actualizar_control(this.value);" />
+                  <!--div class="settings__item__child settings__item__tooltip">Last Step</div-->
+                </li>
+                <li class="settings__item settings__item--prev">
+                
+                 <input type="number" name="max" id="max" class="settings__item__child settings__item__button settings__item__button--kaleidoscope" maxlength="5" onchange="llamar_rango();" />
+                  <!--div class="settings__item__child settings__item__tooltip">Last Step</div-->
+                </li>
+                </ul>
+            </div>
+                 
+          </div>
+              
+        </div>
+        <!-- Botones de accion -->
+       
+               
+ 
+       </form>
+    
+    </div> 
+
+       <!--a onclick="javascript:startingConnection();" class="gallery__new" style="position: relative;background:orange;" >Start</a>
+    <br/> <br/> <br/>
+       <a onclick="javascript:closingConnection();" class="gallery__new" style="position: relative;background:grey;" >Stop</a-->
+       
+      
+    </div>   <!-- End Gallery-artworks -->
+     
+  </div>   <!-- End Gallery -->
+    
+
+    
+    
+
+  <div class="gallery__overlay">
+    <div class="gallery__overlay__bg"></div>
+    <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngIf: artwork.image -->
+</div>
+  </div>
+
+  <div class="login hidden" ng-init="login = true">
+  <div class="login__tint" ng-click="hideLogin()"></div>
+
+  <div class="login__content" ng-show="activeOverlay(&#39;login&#39;)">
+    <h2 class="login__title">You must sign<br>to access to<br>PELE Tool<span>™</span></h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/us/en/users/sign_in" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="login__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_tool" name="user[tool]" type="hidden">
+      <input autocomplete="off" id="user_email" name="user[email]" placeholder="Your Email" type="email" value="">
+      <input autocomplete="off" id="user_password" name="user[password]" placeholder="Your Password" type="password">
+         
+      <input class="login__submit" name="commit" type="submit" value="Sign In">
+</form>
+    <div class="login__error__msg">Email or password was incorrect, try again.</div>
+
+    <p>No account?</p>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;request&#39;)">Request a Beta Invite</a><br>
+      <a href="http://bsc.es/pele/en/aaa/privacy" target="_self" class="login__privacy__link">Privacy Policy</a>
+      <a href="javascript:;" target="_self" class="login__forgot__link" ng-click="setOverlay(&#39;forgot&#39;)">Forgot password?</a>
+    </p>
+  </div>
+
+  <div class="login__content login__content--request ng-hide" ng-show="activeOverlay(&#39;request&#39;)">
+    <h2 class="login__title">Request Beta Invite</h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/en/aaa/invitation" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="request__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_market_id" name="user[market_id]" type="hidden" value="1">
+      <input id="user_name" name="user[name]" placeholder="Full Name" type="text">
+        <input id="user_email" name="user[email]" placeholder="Email Address" type="text" value=""><p></p>
+      <input id="user_company" name="user[company]" placeholder="Company" type="text">
+      <input class="login__submit" name="commit" type="submit" value="Request invite">
+</form>
+    <p>Already have an account?</p>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;login&#39;)">Sign in</a>
+    </p>
+  </div>
+
+  <div class="login__content login__content--forgot ng-hide" ng-show="activeOverlay(&#39;forgot&#39;)">
+    <h2 class="login__title">Forgot your password?</h2>
+    <form accept-charset="UTF-8" action="http://bsc.es/pele/en/aaa/password" class="login__form ng-pristine ng-valid" data-remote="true" data-type="json" id="forgot__form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <input id="user_email" name="user[email]" placeholder="Email Address" type="email" value="">
+      <input class="login__submit" name="commit" type="submit" value="Reset password">
+</form>
+    <p>
+      <a href="javascript:;" ng-click="setOverlay(&#39;login&#39;)">Sign in</a>
+    </p>
+  </div>
+
+  <div class="request__success">
+    <h2 class="login__title">Thank you!</h2>
+    <p>An email has been sent to your inbox. Please click the activation link provided to create your account and access PELE App.<span></span></span></p>
+  </div>
+
+  <div class="forgot__success">
+    <h2 class="login__title">Thank you!</h2>
+    <p>An email has been sent to your inbox. Please follow the instructions on how to reset your password to PELE App.<span>™</span></p>
+  </div>
+
+</div>
+
+  
+  
+</div>
+
+<script src="js/gallery.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/json2.js"></script> 
+<script src="js/grafica.js"></script> 
+  
+
+</body></html>

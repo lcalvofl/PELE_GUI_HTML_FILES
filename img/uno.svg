@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<rect x="2" y="9.737" fill="none" stroke="#909090" stroke-width="1.25" stroke-miterlimit="10" width="96" height="80.525"/>
+<line fill="none" stroke="#909090" stroke-width="1.25" stroke-miterlimit="10" x1="2" y1="24.001" x2="98" y2="24.001"/>
+<circle fill="#909090" cx="9.271" cy="16.719" r="2.27"/>
+<circle fill="#909090" cx="18.213" cy="16.719" r="2.27"/>
+<circle fill="#909090" cx="27.157" cy="16.719" r="2.27"/>
+<g>
+	<polygon fill="#909090" points="51.476,53.769 56.5,53.769 50,46.252 43.499,53.769 48.522,53.769 48.522,65.412 48.522,66.874 
+		51.476,66.874 51.476,65.417 	"/>
+	<polygon fill="#909090" points="48.524,63.982 43.499,63.982 50,71.499 56.5,63.982 51.478,63.982 51.478,52.339 51.478,50.877 
+		48.524,50.877 48.524,52.334 	"/>
+</g>
+<text transform="matrix(1 0 0 1 46.75 39.75)" fill="#909090" font-family="'OpenSans-Semibold'" font-size="12">+</text>
+<text transform="matrix(1 0 0 1 46.75 82.75)" fill="#909090" font-family="'OpenSans-Semibold'" font-size="12">–</text>
+</svg>
